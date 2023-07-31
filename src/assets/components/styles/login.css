@@ -1,0 +1,34 @@
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.8rem;
+}
+
+.formField label {
+    align-self: flex-start;
+}
+
+.formField input {  
+    flex-basis: 2rem;
+    border: none;
+    border-bottom: 1px solid rgba(76, 76, 80, 0.452);
+    border-left: 1px solid rgba(76, 76, 80, 0.452);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 5px;
+}
+
+.botonera {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.botonera button {
+    flex-basis: 15rem;
+    flex-grow: 1;
+}
+
+.error {
+    color: red;
+    /* font-size: 0.8rem; */
+}
