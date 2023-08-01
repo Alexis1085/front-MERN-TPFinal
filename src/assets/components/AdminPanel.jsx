@@ -1,5 +1,6 @@
 import LailaImage from '../Laila-image.jpeg';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
+import './styles/styles.css';
 /* import Agenda from './Agenda.jsx';
 import Modulos from './Modulos.jsx';
 import Osociales from './Osociales.jsx'; */
@@ -7,9 +8,16 @@ import Osociales from './Osociales.jsx'; */
 const AdminPanel = () => {
   return (
     <>
-    <header>
-      <img src={LailaImage} alt="Dra. Laila Tasat" className="image"/>
-      <h2>Bienvenida Dra. Tasat a su panel de administrador</h2>
+    <header className="header">
+      <Link to="/">
+        <button type="button" className="button shut">Cerrar Sesión</button>
+      </Link>
+      <div className="container">
+        <div className="imageContainer">
+          <img src={LailaImage} alt="Dra. Laila Tasat" className="short image"/>
+        </div>
+        <h2>Bienvenida Dra. Tasat a su panel de administración</h2>
+      </div>
     </header>
     <nav className="tabBar">
       <ul className="tabsContainer">

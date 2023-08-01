@@ -1,26 +1,108 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,700;1,200&family=Jost:wght@300;400;600&family=Montserrat:wght@300;400;500;800&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,500&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
 :root {
     background-image: url('./The-Surface.jpg');
     background-color:rgba(220, 220, 240, 0.452);
+    /* background-repeat: repeat; */
+    background-size: cover;
+    font-family: 'Nunito Sans', 'Barlow', 'Jost', 'Montserrat', sans-serif;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+.header {
+    text-align: end;
+}
+
+.header button {
+    margin: 1.5rem 2rem 0 0;
+}
+.container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0.5rem;
+    text-align: start;
+    /* justify-content: space-around; */
+}
+
+.image {
+    border-radius: 50%;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.500)
+}
+
+.main {
+    max-width: 250px;
+}
+
+.short {
+    width: 120px;
+}
+
+.header h2 {
+    text-wrap: balance;
+}
+
+.formContainer {
+    margin: 1rem 2rem;
+    padding: 1rem;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.600);
+}
+
+.formContainer fieldset {
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.formContainer legend {
+    display: none;
 }
 
 .formField {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0.8rem;
+    gap: 0.3rem;
+    margin-top: 0.8rem;
 }
 
 .formField label {
     align-self: flex-start;
 }
 
-.formField input {  
+.formField input , .formField select , .formField textarea {  
     flex-basis: 2rem;
-    border: none;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
     border-bottom: 1px solid rgba(76, 76, 80, 0.452);
     border-left: 1px solid rgba(76, 76, 80, 0.452);
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 5px;
+    border-radius: 5px 10px 10px 5px;
+}
+
+.formField input:focus {
+    border: 1px solid black;
+}
+
+.formField input::placeholder, .formField textarea::placeholder {
+    padding-left: 1rem;
+    font-weight: 500;
 }
 
 .botonera {
@@ -33,17 +115,136 @@
     flex-grow: 1;
 }
 
+.button {
+    padding: 0.6rem;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-color: rgb(247, 214, 184);
+    font-weight: 600;
+}
+
+.button:hover {
+    border-color: orangered;
+    background-color: rgb(254, 221, 191);
+}
+
+.shut {
+    background-color: rgb(30, 30, 30);
+    color: bisque;
+}
+
+.shut:hover {
+    border-color: black;
+    background-color: rgb(100, 100, 100);
+}
+
+.cancel {
+    background-color: rgb(100, 100, 100);
+    color: whitesmoke;
+}
+
+.cancel:hover {
+    background-color: rgb(30, 30, 30);
+    border-color: black;
+}
+
+.update {
+    background-color: rgb(12, 151, 216);
+    color: whitesmoke;
+}
+
+.update:hover {
+    background-color: rgb(90, 180, 216);
+    border-color: rgb(200, 200, 200);
+}
+
+.delete {
+    background-color: rgb(216, 15, 12);
+    color: whitesmoke;
+}
+
+.delete:hover {
+    background-color: rgb(216, 180, 90);
+    border-color: rgb(200, 200, 200);
+}
+
 .error {
     color: red;
     /* font-size: 0.8rem; */
 }
 
-.image {
-    width: 30%;
-    border-radius: 50%;
-    border: 10px solid white
-}
-
 .turnosContainer {
     display: grid;
+    background-color: rgba(220, 220, 240, 0.452);
+}
+
+.tabBar {
+    background-color: rgb(210, 89, 60, 0.600);
+    border-bottom: 2px solid black;
+}
+
+.tabsContainer {
+    display: flex;
+    margin: 0.2rem 0.3rem 0 0.3rem;
+}
+
+.tabsContainer li {
+    flex-basis: 7rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 10px 10px 0 0;
+    background-color: rgb(121, 213, 230, 0.200);
+    text-align: center;
+}
+
+.tabsContainer li:hover {
+    background-color: rgb(151, 213, 210, 0.800);
+}
+
+/* .tabsContainer li:target {
+    background-color: blue;
+} */
+
+.tableContainer {
+    width: min( 100% - 3rem , 1800px); /*Lo primero es el ancho minimo (100% del contenedor menos 3rems. Lo segundo sería el ancho maximo*/
+    margin-inline: auto; /* Este comando es para repartir los 3rem de margin igual a ambos lados*/
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    background-color: rgb(243, 239, 222, 0.800);
+}
+
+tbody {
+    background-color: rgb(253, 249, 232, 0.500);
+}
+
+th, td {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+
+/* Para hacer la tabla tipo cebra */
+tr:nth-of-type(2n) {
+    background-color: rgb(245, 245, 242, 0.500);
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.650);
+    margin: 0 auto;
+    width: 95vw;
+}
+
+.footerText {
+    padding: 0.5rem 0.5rem;
+    text-align: center;
 }

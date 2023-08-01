@@ -14,9 +14,9 @@ const Agenda = () => {
         axios.get(`${URL}/admin/agenda`)
         .then(response => {
             setListaTurnos(response.data.listaTurnos)
-            console.log(listaTurnos)
+            //console.log(listaTurnos)
         })
-    },[URL, listaTurnos/* , refresh */])
+    },[URL/* , refresh */])
 
     return (
         <div className="panelContainer">

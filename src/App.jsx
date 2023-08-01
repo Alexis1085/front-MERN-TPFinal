@@ -18,22 +18,26 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route exact path="/" index element={ <Home/> }/>
-        <Route exact path="/admin" element={ <Login/> }/>
-        <Route exact path="/admin-panel/*" element={ <AdminPanel/> }>
-          <Route path="agenda/*" element={ <Agenda/> }>
-            <Route exact path="abrir-agenda" element={ <NuevosTurnos/> }/>
-          </Route>
-          <Route exact path="modulos/*" element={ <Modulos/> }>
-            <Route path="" index element={ <ListaModulos/> }/>
-            <Route exact path="crear-modulo" element={ <NuevoModulo/> }/>
-            <Route exact path="actualizar-modulo" element={ <ActualizarModulo/> }/>
-          </Route>
-          <Route exact path="obrassociales" element={ <Osociales/> }/>
-        </Route>
-      </Routes>
-      <Footer/>
+      <div className="mainContainer">
+        <main>
+          <Routes>
+            <Route exact path="/" index element={ <Home/> }/>
+            <Route exact path="/admin" element={ <Login/> }/>
+            <Route exact path="/admin-panel/*" element={ <AdminPanel/> }>
+              <Route path="agenda/*" element={ <Agenda/> }>
+                <Route exact path="abrir-agenda" element={ <NuevosTurnos/> }/>
+              </Route>
+              <Route exact path="modulos/*" element={ <Modulos/> }>
+                <Route path="" index element={ <ListaModulos/> }/>
+                <Route exact path="crear-modulo" element={ <NuevoModulo/> }/>
+                <Route exact path="actualizar-modulo" element={ <ActualizarModulo/> }/>
+              </Route>
+              <Route exact path="obrassociales" element={ <Osociales/> }/>
+            </Route>
+          </Routes>
+        </main>
+        <Footer/>
+      </div>
     </BrowserRouter>
   )
 }

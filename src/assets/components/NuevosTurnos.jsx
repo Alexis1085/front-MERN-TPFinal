@@ -112,7 +112,7 @@ const NuevosTurnos = () => {
                 </fieldset>
                 <div className="botonera">
                     <Link to="/admin-panel/agenda">
-                        <button type="reset" className="button">Cancelar</button>
+                        <button type="reset" className="button cancel">Cancelar</button>
                     </Link>
                     <button type="submit" className="button">Publicar Turnos</button>
                 </div>

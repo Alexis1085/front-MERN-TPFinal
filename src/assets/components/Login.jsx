@@ -3,7 +3,7 @@ import bcrypt from 'bcryptjs';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-//import './styles/login.css';
+import './styles/styles.css';
 
 
 const Login = () => {
@@ -52,7 +52,7 @@ const Login = () => {
 
     return (
         <div className="formContainer">
-            <h2>Acceso al Panel de Administrador</h2>
+            <h2>Acceso al Panel de Administración</h2>
             <form onSubmit={handleSubmit(logIn)}>
                 <fieldset>
                     <legend>Log In</legend>
@@ -86,7 +86,7 @@ const Login = () => {
                     </div>
                 </fieldset>
                 <div className="botonera">
-                <button type="submit" className="login">LOG IN</button>
+                    <button type="submit" className="button login">LOG IN</button>
                 </div>
             </form>
         </div>

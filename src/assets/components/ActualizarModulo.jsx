@@ -147,7 +147,7 @@ const ActualizarModulo = () => {
                             })}
                         />
                     </div>
-                    <div>
+                    <div className="formField">
                         <label htmlFor="mensaje"
                             className={errors.mensaje && "error"}
                         >Agregue un mensaje para el paciente:
@@ -185,7 +185,7 @@ const ActualizarModulo = () => {
                 </fieldset>
                 <div className="botonera">
                     <Link to="/admin-panel/modulos">
-                        <button type="reset" className="button">Cancelar</button>
+                        <button type="reset" className="button cancel">Cancelar</button>
                     </Link>
                     <button type="submit" className="button">Actualizar Módulo</button>
                 </div>
