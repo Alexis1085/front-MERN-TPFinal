@@ -14,9 +14,9 @@ const Agenda = () => {
         axios.get(`${URL}/admin/agenda`)
         .then(response => {
             setListaTurnos(response.data.listaTurnos)
-            //console.log(listaTurnos)
+            console.log(listaTurnos)
         })
-    },[URL/* , refresh */])
+    },[URL, listaTurnos/* , refresh */])
 
     return (
         <div className="panelContainer">
@@ -27,12 +27,12 @@ const Agenda = () => {
                 </Link>
             </div>
                 <Outlet/>
-                {listaTurnos.map((element) => {
+                {/* {listaTurnos.map((element) => {
                     return(
                         <h5 key={element._id}>Agenda</h5>
                     )
                 }) 
-                }
+                } */}
         </div>
     )
 }
