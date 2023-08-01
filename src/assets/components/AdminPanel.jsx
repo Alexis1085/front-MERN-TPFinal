@@ -1,4 +1,4 @@
-
+import LailaImage from '../Laila-image.jpeg';
 import { NavLink, Outlet } from 'react-router-dom';
 /* import Agenda from './Agenda.jsx';
 import Modulos from './Modulos.jsx';
@@ -8,6 +8,7 @@ const AdminPanel = () => {
   return (
     <>
     <header>
+      <img src={LailaImage} alt="Dra. Laila Tasat" className="image"/>
       <h2>Bienvenida Dra. Tasat a su panel de administrador</h2>
     </header>
     <nav className="tabBar">

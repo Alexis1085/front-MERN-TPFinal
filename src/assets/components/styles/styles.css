@@ -1,4 +1,9 @@
 
+:root {
+    background-image: url('./The-Surface.jpg');
+    background-color:rgba(220, 220, 240, 0.452);
+}
+
 .formField {
     display: flex;
     flex-direction: column;
@@ -31,4 +36,14 @@
 .error {
     color: red;
     /* font-size: 0.8rem; */
+}
+
+.image {
+    width: 30%;
+    border-radius: 50%;
+    border: 10px solid white
+}
+
+.turnosContainer {
+    display: grid;
 }

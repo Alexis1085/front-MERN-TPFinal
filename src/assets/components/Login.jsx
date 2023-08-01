@@ -3,7 +3,7 @@ import bcrypt from 'bcryptjs';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import './styles/login.css';
+//import './styles/login.css';
 
 
 const Login = () => {
@@ -64,7 +64,7 @@ const Login = () => {
                             type="text"
                             id="usuario"
                             name="usuario"
-                            placeholder="Usuario"
+                            placeholder="Usuario: admin"
                             {...register('usuario', {
                                 required: true
                             })}
@@ -78,7 +78,7 @@ const Login = () => {
                             type="password"
                             id="password"
                             name="password"
-                            placeholder="Contraseña de acceso"
+                            placeholder="Contraseña de acceso: admin"
                             {...register('password', {
                                 required: true,
                             })}

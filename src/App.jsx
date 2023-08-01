@@ -9,7 +9,9 @@ import ListaModulos from './assets/components/ListaModulos';
 import NuevoModulo from './assets/components/NuevoModulo';
 import ActualizarModulo from './assets/components/ActualizarModulo';
 import Osociales from './assets/components/Osociales';
+import Footer from './assets/components/Footer';
 import './App.css'
+import './assets/components/styles/styles.css'
 
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
           <Route exact path="obrassociales" element={ <Osociales/> }/>
         </Route>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   )
 }
